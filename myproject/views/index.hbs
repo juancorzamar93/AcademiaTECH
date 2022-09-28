@@ -1,0 +1,150 @@
+<header>
+    <div class="logo_AP">
+      
+      <h4>"Academia TECH" - Alumno: Juan Cortez Zamar - Docente: Brian Galli</h4>
+      <nav class="redes_sociales">
+        <a href="#" class="icon_facebook"
+          ><img src="../icons/facebook.svg" alt=""
+        /></a>
+        <a href="#" class="icon_twitter"
+          ><img src="../icons/twitter.svg" alt=""
+        /></a>
+        <a href="https://github.com/juancorzamar93" class="icon_github"
+          ><img src="../icons/github.svg" alt=""
+        /></a>
+        <button type="button" class="btn btn-warning"><a class="{{#if isLogin}}activo{{/if}}" href="/login">Login</a></button>
+        <button type="button" class="btn btn-warning"><a class="{{#if isLogout}}activo{{/if}}" href="/layout"></a>Logout</a></button>
+      </nav>
+    </div>
+</header>
+  <br>
+<section>
+    <!-- BANNER + PERFIL -->  
+    <div class="perfil_banner">
+      <img class="banner" src="../img/banner1.jpg" alt="banner" />
+      <div class="_perfil">
+        <img class="perfil" src="../img/perfil.png" alt="" />
+      </div>
+      <h2 class="card_name">Juan Cortez Zamar</h2>
+      <p class="card_position">Full Stack Developer Jr.</p>
+    </div>
+    <div class="acerca_de_mi">
+      <h5 style="font-weight: bold">Acerca de mi</h5>
+      <p>
+        Soy graduado en Licenciatura en Biotecnología pero he encontrado mi
+        verdadera vocación en la programación. Por eso decidí cursar la
+        tecnicatura relacionada con la programación para poder emprender el
+        camino que quiero seguir. Mi objetivo es encontrar empleo en la
+        industria de TI para seguir formándome y adquirir experiencias
+        laborales que ayude a mi crecimiento tanto laboral como en lo
+        personal. Me considero una persona proactiva, organizada y
+        responsable, con buenas relaciones interpersonales. Siempre tengo la
+        mejor disposición para la realización de mis labores.
+      </p>
+    </div>
+</section>
+  <br>
+  <h2>Educación</h2>
+  <div class="utn">
+    <img src="../img/utn.png" alt="" id="utn" />
+    <h6>Tec. Univ. en Programación</h6>
+    <p>
+      Actualmente me encuentro cursando 2° año en la facultad regional de
+      Tucumán. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Tenetur accusamus sed tempora repellat, sint perspiciatis quas
+      incidunt quibusdam? Laborum atque voluptates tempore eveniet quis
+      incidunt quaerat perspiciatis facere, illo molestias.
+    </p>
+  </div>
+  <div class="ispc">
+    <img src="../img/ispc.png" alt="" id="ispc" />
+    <h6>Tecnicatura en CD e IA</h6>
+    <p>
+      Actualmente me encuentro cursando 1° año. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Hic blanditiis inventore error animi
+      recusandae, quae sit enim in asperiores sint perspiciatis corrupti
+      earum, est labore! Nam molestiae hic perspiciatis nemo.
+    </p>
+  </div>
+  
+  <br/>
+<h2>Experiencias laborales</h2>
+{{#each experiencias}}
+<div class="container text-center">
+  <div class="row">
+    <div class="col col-lg-2">
+      <h3>{{nombreEmpresa}}</h3>
+    </div>
+    <div class="col">
+      <h3>{{descripcion}}</h3>
+    </div>     
+  </div>
+</div>
+{{/each}}
+  {{!-- <div class="row">
+  <h2>Experiencias laborales</h2>
+  <div class="col-lg-2">
+    <button
+      type="button"
+      class="btn btn-info"
+      routerLink="/nuevaexp"
+      *ngIf="isLogged"
+    >
+      Nueva experiencia
+    </button>
+  </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Experiencia of expe">
+          <td>
+            <h4>{{ Experiencia.nombreE }}</h4>
+          </td>
+          <td>{{ Experiencia.descripcionE }}</td>
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-info"
+              routerLink="/editexp/{{ Experiencia.id }}"
+            >
+              <i class="bi bi-pencil-square"></i> EDITAR
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+              <i class="bi bi-trash-fill"></i> BORRAR
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> --}}
+
+<br />
+
+<h2>Hard & Soft skills</h2>
+<div class="row">
+  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+    
+  </div>
+</div>
+
+<br>
+<h2>Proyectos</h2>
+  <h5 style="font-weight: bold" class="proyecto">
+    Diseño de página web para la empresa
+    <span style="color: green">"Biotech Semillas"</span>
+  </h5>
+  <p class="proyecto">
+    Para el diseño de Front-end se usó los siguientes lenguajes: HTML, CSS y
+    JavasScript. Para el caso de Backend se usó NodeJS y MySQL. Durante el
+    desarrollo, hemos usado la metodología ágil para el proyecto
+    colaborativo. Se lo puede ver en el repositorio github.
+  </p>
+  <div class="img_biotech">
+    <img src="../img/biotech.png" alt="" id="biotech" />
+  </div>
+
+  
